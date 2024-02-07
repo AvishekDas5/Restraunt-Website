@@ -1,0 +1,868 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Restraunt</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="/main.css">
+    <link rel="icon" type="image/x-icon" href="/images/icon.png">
+    <script src="https://kit.fontawesome.com/9e76a5d7e1.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+
+    <!--Feedback-->
+    <button class="sticky-btn" onclick="fopenForm()">Feedback +</button>
+    <div class="fform-popup" id="fmyForm">
+      <form class="fform-container" onsubmit="mycontact()">
+        <h2 class="chead">Feedback</h2>
+    
+        <input type="text" placeholder="Your Name" name="name" required>
+        <p style="font-size: 15px;">How was your experience?</p>
+        <div class="rating">
+          <label>
+            <input type="radio" name="stars" value="1" />
+            <span class="icon">★</span>
+          </label>
+          <label>
+            <input type="radio" name="stars" value="2" />
+            <span class="icon">★</span>
+            <span class="icon">★</span>
+          </label>
+          <label>
+            <input type="radio" name="stars" value="3" />
+            <span class="icon">★</span>
+            <span class="icon">★</span>
+            <span class="icon">★</span>   
+          </label>
+          <label>
+            <input type="radio" name="stars" value="4" />
+            <span class="icon">★</span>
+            <span class="icon">★</span>
+            <span class="icon">★</span>
+            <span class="icon">★</span>
+          </label>
+          <label>
+            <input type="radio" name="stars" value="5" />
+            <span class="icon">★</span>
+            <span class="icon">★</span>
+            <span class="icon">★</span>
+            <span class="icon">★</span>
+            <span class="icon">★</span>
+          </label>
+        </div>
+    
+        <textarea name="message" placeholder="Message" style="height:150px"></textarea>
+    
+        <button type="submit" class="fbtn">Send</button>
+        <button type="button" class="fbtn fcancel" onclick="fcloseForm()">Close</button>
+      </form>
+      </div>
+
+    <!--Banner Section-->
+
+    <div class="header">
+      <div class="slideshow-container">
+        <div class="mySlides fade">
+          <img
+            class="banner"
+            src="/images/banner/anna-pelzer-IGfIGP5ONV0-unsplash.jpg" alt="Banner Food 1"
+          />
+        </div>
+
+        <div class="mySlides fade">
+          <img
+            class="banner"
+            src="/images/banner/ban3.avif" alt="Banner Food 2"
+          />
+        </div>
+
+        <div class="mySlides fade">
+          <img
+            class="banner"
+            src="/images/banner/lily-banse--YHSwy6uqvk-unsplash.jpg" alt = "Banner Food 3"
+          />
+        </div>
+        <div class="text btext">
+          <h1>Overwatch Restraunt</h1>
+          <p style="font-size:18px">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ratione magni incidunt minus soluta nam, est labore voluptatibus quod doloremque iusto.</p>
+          <div>
+            <p class="t2">
+              <span class="dot"></span>
+              <span class="dot"></span>
+              <span class="dot"></span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--Navbar Section-->
+
+    <div id="tablink">
+      <button
+        class="tablink"
+        onclick="openPage('Home', this, 'red')"
+        id="defaultOpen"
+      >
+        Home
+      </button>
+      <button class="tablink" onclick="openPage('About', this, 'green')">
+        About
+      </button>
+      <button class="tablink" onclick="openPage('Menu', this, 'blue')">
+        Menu
+      </button>
+      <button class="tablink" onclick="openPage('Gallery', this, 'brown')">
+        Gallery
+      </button>
+      <button class="tablink" onclick="openPage('Healty_Tips',this,'orange')">
+        Healty Tips
+      </button>
+      <button class="tablink" onclick="openPage('Contact_Us',this,'purple')">
+        Contact Us
+      </button>
+    </div>
+
+    <!--Home Section-->
+
+    <div id="Home" class="tabcontent">
+      <h2 class="chead">Welcome To Our Restraunt</h2>
+      <div class="row">
+        <div class="column" style="text-align: justify">
+          <h3>Our Speciality</h3>
+          <p style="padding-right: 30px">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas
+            sit amet pretium urna. Vivamus venenatis velit nec neque ultricies,
+            eget elementum magna tristique. Quisque vehicula, risus eget aliquam
+            placerat, purus leo tincidunt eros, eget luctus quam orci in velit.
+            Praesent scelerisque tortor sed accumsan convallis.
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt
+            excepturi pariatur molestias vel nisi laborum expedita! Nam
+            provident deleniti inventore asperiores veritatis accusantium qui,
+            id nisi consequatur tempore suscipit distinctio dolorum cupiditate
+            minus a. Nesciunt, dolor labore ipsa possimus vel expedita sit porro
+            fugiat, quis voluptatum quo inventore corrupti, minima voluptate
+            facere vitae aperiam? Ex quisquam atque quidem est rem!
+          </p>
+        </div>
+
+        <div class="column">
+          <div class="dish">
+            <img
+              class="specialf"
+              src="/images/home/photo-1595295333158-4742f28fbd85.avif"
+              alt="Image of Special Food"
+            />
+            <h3>Dish of the Day</h3>
+            <button class="df" onclick="openPage('Menu',this)">Lorem ipsum dolor sit.</button>
+          </div>
+          <div style="text-align: center">
+            <h4 class="sof">Special Offer</h4>
+            <button class="button" onclick="openPage('Menu',this)">30% off on first order</button>
+            <button class="button" onclick="openPage('Menu',this)">50% off on 2 in 1 combo</button>
+            <button class="button" onclick="openPage('Menu',this)">20% off on drinks</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--About Us Section-->
+
+    <div id="About" class="tabcontent">
+      <h2 class="chead">About us</h2>
+      <img
+        class="aimg"
+        src="/images/about/int.avif" alt="Restraunt Interior"
+      />
+      <h3>We are open since 1990</h3>
+      <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Architecto
+        cupiditate doloribus reprehenderit possimus explicabo, magnam aliquid ea
+        libero iste placeat, labore porro aperiam. Natus, nostrum. Aliquam autem
+        sit voluptates corporis amet eos repellat eveniet tenetur sunt sed,
+        facilis explicabo beatae expedita magnam sapiente eius quae quaerat quo
+        quod, molestias eum.
+      </p>
+      <h3>Best Foods</h3>
+      <p style="width: 50%">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic numquam,
+        quisquam velit inventore autem corporis delectus nihil impedit soluta?
+        Sequi rem soluta cum explicabo libero iure totam impedit laborum
+        exercitationem commodi sapiente laboriosam nesciunt earum laudantium
+        nulla recusandae, inventore nihil eaque aperiam sit modi! Cum dolorum
+        natus reprehenderit maiores optio.
+      </p>
+      <h3 class="chead">Meet the Team</h3>
+      <div class="brow">
+        <div class="bcolumn">
+          <div class="bcard">
+            <img
+              class="mag"
+              src="/images/about/imgCEO.avif"
+              alt="Jim Carter"
+            />
+            <div class="bcontainer">
+              <h2>Jim Carter</h2>
+              <p class="btitle">CEO & Founder</p>
+              <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+              <p>jimcarter.69@gmail.com</p>
+              <p><button class="bbutton" onclick="openPage('Contact_Us',this,'purple')" >Contact</button></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="bcolumn">
+          <div class="bcard">
+            <img
+              class="mag"
+              src="images/about/imgManager.avif"
+              alt="Christina Ross"
+            />
+            <div class="bcontainer">
+              <h2>Christina Ross</h2>
+              <p class="btitle">Manager</p>
+              <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+              <p>christina.89@gmail.com</p>
+              <p><button class="bbutton" onclick="openPage('Contact_Us',this,'purple')" >Contact</button></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="bcolumn">
+          <div class="bcard">
+            <img
+              class="mag"
+              src="images/about/imgMaster.avif"
+              alt="John Doe"
+            />
+            <div class="bcontainer">
+              <h2>John Doe</h2>
+              <p class="btitle">Master Chef</p>
+              <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+              <p>Johndoe.8008@gmail.com</p>
+              <p><button class="bbutton" onclick="openPage('Contact_Us',this,'purple')" >Contact</button></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--Menu Section-->
+    
+    <div id="Menu" class="tabcontent">
+      <h2 class="chead">Special Dishes</h2>
+      <div style="display: table">
+        <div class="mcard mcolumn" style="display: table-cell">
+          <img
+            class="mdish"
+            src="/images/menu/saswale.avif"
+            alt="Saswale"
+          />
+          <div class="mcontainer">
+            <h4 class="mname">Saswale</h4>
+            <p class="mdisc">
+              Accusamus libero quo tempore suscipit molestias qui quam illo
+              facere aspernatur esse! Doloribus?
+            </p>
+            <p class="mcost">₹80</p>
+          </div>
+        </div>
+
+        <div class="mcard mcolumn" style="display: table-cell">
+          <img
+            class="mdish"
+            src="/images/menu/mikorama.avif"
+            alt="Mikorama"
+          />
+          <div class="mcontainer">
+            <h4 class="mname">Mikorama</h4>
+            <p class="mdisc">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+              Accusamus aut voluptas laudantium!
+            </p>
+            <p class="mcost">₹80</p>
+          </div>
+        </div>
+
+        <div class="mcard mcolumn" style="display: table-cell">
+          <img
+            class="mdish"
+            src="/images/menu/origini.avif"
+            alt="Orgini Salad"
+          />
+          <div class="mcontainer">
+            <h4 class="mname">Orgini Salad</h4>
+            <p class="mdisc">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime
+              itaque assumenda tempore?
+            </p>
+            <p class="mcost">₹60</p>
+          </div>
+        </div>
+
+        <div class="mcard mcolumn" style="display: table-cell">
+          <img
+            class="mdish"
+            src="images/menu/raatol.avif"
+            alt="Ratlorem"
+          />
+          <div class="mcontainer">
+            <h4 class="mname">Ratlorem</h4>
+            <p class="mdisc">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Delectus
+              aut eaque tempore.
+            </p>
+            <p class="mcost">₹220</p>
+          </div>
+        </div>
+
+        <div class="mcard mcolumn" style="display: table-cell">
+          <img
+            class="mdish"
+            src="images/menu/hulatte.avif"
+            alt="Hulatte"
+          />
+          <div class="mcontainer">
+            <h4 class="mname">Hulatte</h4>
+            <p class="mdisc">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa et
+              error rem.
+            </p>
+            <p class="mcost">₹180</p>
+          </div>
+        </div>
+
+        <div class="mcard mcolumn" style="display: table-cell">
+          <img
+            class="mdish"
+            src="images/menu/fung.avif"
+            alt="Fung Fuwan Noodles"
+          />
+          <div class="mcontainer">
+            <h4 class="mname">Fung Fuwan Noodles</h4>
+            <p class="mdisc">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Est
+              officia ad sapiente!
+            </p>
+            <p class="mcost">₹160</p>
+          </div>
+        </div>
+      </div>
+
+
+      <h2 class="chead">Main Menu</h2>
+      <div style="display: table">
+        <div class="mcard mcolumn" style="display: table-cell">
+          <img
+            class="mdish"
+            src="images/menu/pasta.avif"
+            alt="Le Pasta"
+          />
+          <div class="mcontainer">
+            <h4 class="mname">Le Pasta</h4>
+            <p class="mdisc">
+              Accusamus libero quo tempore suscipit molestias qui quam illo
+              facere aspernatur esse! Doloribus?
+            </p>
+            <p class="mcost">₹80</p>
+          </div>
+        </div>
+
+        <div class="mcard mcolumn" style="display: table-cell">
+          <img
+            class="mdish"
+            src="images/menu/idli.avif"
+            alt="Idli"
+          />
+          <div class="mcontainer">
+            <h4 class="mname">Idli</h4>
+            <p class="mdisc">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+              Accusamus aut voluptas laudantium!
+            </p>
+            <p class="mcost">₹80</p>
+          </div>
+        </div>
+
+        <div class="mcard mcolumn" style="display: table-cell">
+          <img
+            class="mdish"
+            src="images/menu/ditd.avif"
+            alt="lorem ispum dolor sit"
+          />
+          <div class="mcontainer">
+            <h4 class="mname">Lorem ipsum dolor sit</h4>
+            <p class="mdisc">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime
+              itaque assumenda tempore?
+            </p>
+            <p class="mcost">₹280</p>
+          </div>
+        </div>
+
+        <div class="mcard mcolumn" style="display: table-cell">
+          <img
+            class="mdish"
+            src="/images/menu/biriyani.avif"
+            alt="Le Biriyani"
+          />
+          <div class="mcontainer">
+            <h4 class="mname">Le Biriyani</h4>
+            <p class="mdisc">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Delectus
+              aut eaque tempore.
+            </p>
+            <p class="mcost">₹150</p>
+          </div>
+        </div>
+
+        <div class="mcard mcolumn" style="display: table-cell">
+          <img
+            class="mdish"
+            src="images/menu/tac.avif"
+            alt="Taco Indiana"
+          />
+          <div class="mcontainer">
+            <h4 class="mname">Taco Indiana</h4>
+            <p class="mdisc">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa et
+              error rem.
+            </p>
+            <p class="mcost">₹100</p>
+          </div>
+        </div>
+
+        <div class="mcard mcolumn" style="display: table-cell">
+          <img
+            class="mdish"
+            src="/images/menu/ppia.avif"
+            alt="Pie de Pizza"
+          />
+          <div class="mcontainer">
+            <h4 class="mname">Pie de Pizza</h4>
+            <p class="mdisc">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Est
+              officia ad sapiente!
+            </p>
+            <p class="mcost">₹120</p>
+          </div>
+        </div>
+
+        <div class="mcard mcolumn" style="display: table-cell">
+          <img
+            class="mdish"
+            src="/images/menu/mota.avif"
+            alt="Momotaro"
+          />
+          <div class="mcontainer">
+            <h4 class="mname">Momotaro</h4>
+            <p class="mdisc">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime
+              itaque assumenda tempore?
+            </p>
+            <p class="mcost">₹60</p>
+          </div>
+        </div>
+
+        <div class="mcard mcolumn" style="display: table-cell">
+          <img
+            class="mdish"
+            src="images/menu/apie.avif"
+            alt="Apple Pie"
+          />
+          <div class="mcontainer">
+            <h4 class="mname">Apple Pie</h4>
+            <p class="mdisc">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime
+              itaque assumenda tempore?
+            </p>
+            <p class="mcost">₹140</p>
+          </div>
+        </div>
+
+        <div class="mcard mcolumn" style="display: table-cell">
+          <img
+            class="mdish"
+            src="images/menu/apiz.avif"
+            alt="Le Pizza"
+          />
+          <div class="mcontainer">
+            <h4 class="mname">Le Pizza</h4>
+            <p class="mdisc">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime
+              itaque assumenda tempore?
+            </p>
+            <p class="mcost">₹150</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--Gallery Section-->
+
+    <div id="Gallery" class="tabcontent">
+      <h2 class="chead">Gallery</h2>
+      <div class="gtab">
+      <div class="gpic">
+        <img class="gimg" src="images/gallery/g1.avif"
+        alt="Restraunt Image">
+        <div class="goverlay">
+         <div class="gtitle"> Restraunt image</div>
+         <p class="gdisc">23/04/2021</p>
+        </div>
+      </div>  
+
+      <div class="gpic">
+        <img class="gimg" src="images/gallery/g2.avif"
+        alt="Restraunt Image">
+        <div class="goverlay">
+         <div class="gtitle"> Wew takee</div>
+         <p class="gdisc">22/07/2017</p>
+        </div>
+      </div>  
+      
+      <div class="gpic">
+        <img class="gimg" src="images/gallery/g3.avif"
+        alt="Restraunt Image">
+        <div class="goverlay">
+         <div class="gtitle"> Restraunt loremen</div>
+         <p class="gdisc">12/12/2019</p>
+        </div>
+      </div>  
+      
+      <div class="gpic">
+        <img class="gimg" src="images/gallery/g4.avif"
+        alt="Restraunt Image">
+        <div class="goverlay">
+         <div class="gtitle"> Restraunt we</div>
+         <p class="gdisc">23/01/2018</p>
+        </div>
+      </div>  
+      
+      <div class="gpic">
+        <img class="gimg" src="images/gallery/g5.avif"
+        alt="Restraunt Image">
+        <div class="goverlay">
+         <div class="gtitle"> Restraunt day</div>
+         <p class="gdisc">23/04/2017</p>
+        </div>
+      </div>  
+      
+      <div class="gpic">
+        <img class="gimg" src="images/gallery/g6.avif"
+        alt="Restraunt Image">
+        <div class="goverlay">
+         <div class="gtitle"> Reopen Yay</div>
+         <p class="gdisc">23/04/2022</p>
+        </div>
+      </div>  
+      
+      <div class="gpic">
+        <img class="gimg" src="images/gallery/g7.avif"
+        alt="Restraunt Image">
+        <div class="goverlay">
+         <div class="gtitle"> Food image</div>
+         <p class="gdisc">03/04/2019</p>
+        </div>
+      </div>  
+      
+      <div class="gpic">
+        <img class="gimg" src="images/gallery/g8.avif"
+        alt="Restraunt Image">
+        <div class="goverlay">
+         <div class="gtitle"> Busy Day</div>
+         <p class="gdisc">01/01/2022</p>
+        </div>
+      </div>  
+      
+      <div class="gpic">
+        <img class="gimg" src="images/gallery/g9.avif"
+        alt="Restraunt Image">
+        <div class="goverlay">
+         <div class="gtitle"> New Dish</div>
+         <p class="gdisc">17/05/2016</p>
+        </div>
+      </div>  
+      
+      <div class="gpic">
+        <img class="gimg" src="images/gallery/g10.avif"
+        alt="Restraunt Image">
+        <div class="goverlay">
+         <div class="gtitle"> Experimentation</div>
+         <p class="gdisc">23/07/2007</p>
+        </div>
+      </div>  
+      
+      <div class="gpic">
+        <img class="gimg" src="images/gallery/g11.avif"
+        alt="Restraunt Image">
+        <div class="goverlay">
+         <div class="gtitle"> Reception Preperation</div>
+         <p class="gdisc">12/12/2012</p>
+        </div>
+      </div>  
+      
+      <div class="gpic">
+        <img class="gimg" src="images/gallery/g12.avif"
+        alt="Restraunt Image">
+        <div class="goverlay">
+         <div class="gtitle"> New Food</div>
+         <p class="gdisc">23/04/2007</p>
+        </div>
+      </div>  
+      
+      <div class="gpic">
+        <img class="gimg" src="images/gallery/g13.avif"
+        alt="Restraunt Image">
+        <div class="goverlay">
+         <div class="gtitle"> EAT </div>
+         <p class="gdisc">23/04/2014</p>
+        </div>
+      </div>  
+      
+      <div class="gpic">
+        <img class="gimg" src="images/gallery/g14.avif"
+        alt="Restraunt Image">
+        <div class="goverlay">
+         <div class="gtitle"> Master Chef</div>
+         <p class="gdisc">07/02/2009</p>
+        </div>
+      </div>  
+      
+      <div class="gpic">
+        <img class="gimg" src="images/gallery/g15.avif"
+        alt="Restraunt Image">
+        <div class="goverlay">
+         <div class="gtitle"> Limied Edition</div>
+         <p class="gdisc">04/04/2017</p>
+        </div>
+      </div>  
+      
+      <div class="gpic">
+        <img class="gimg" src="images/gallery/g16.avif"
+        alt="Restraunt Image">
+        <div class="goverlay">
+         <div class="gtitle"> Coffee</div>
+         <p class="gdisc">28/04/2017</p>
+        </div>
+      </div>  
+      
+      <div class="gpic">
+        <img class="gimg" src="images/gallery/g17.avif"
+        alt="Restraunt Image">
+        <div class="goverlay">
+         <div class="gtitle"> Backstore</div>
+         <p class="gdisc">23/11/2000</p>
+        </div>
+      </div>  
+      
+      <div class="gpic">
+        <img class="gimg" src="images/gallery/g18.avif"
+        alt="Restraunt Image">
+        <div class="goverlay">
+         <div class="gtitle">Happy Costumers</div>
+         <p class="gdisc">30/08/2013</p>
+        </div>
+      </div>  
+      
+      <div class="gpic">
+        <img class="gimg" src="images/gallery/g19.avif"
+        alt="Restraunt Image">
+        <div class="goverlay">
+         <div class="gtitle"> Birthday</div>
+         <p class="gdisc">23/11/2017</p>
+        </div>
+      </div>  
+      
+      <div class="gpic">
+        <img class="gimg" src="images/gallery/g20.avif"
+        alt="Restraunt Image">
+        <div class="goverlay">
+         <div class="gtitle"> Street</div>
+         <p class="gdisc">01/01/2021</p>
+        </div>
+      </div>  
+      
+      <div class="gpic">
+        <img class="gimg" src="images/gallery/g21.avif"
+        alt="Restraunt Image">
+        <div class="goverlay">
+         <div class="gtitle"> Day One</div>
+         <p class="gdisc">28/02/1999</p>
+        </div>
+      </div>  
+      </div>
+    </div>
+    
+    <!--Healthy Tips Section-->
+    
+    <div id="Healty_Tips" class="tabcontent">
+      <div class="hslideshow-container">
+
+        <h2 class="chead">Healthy Tips</h2>
+
+        <div class="hmySlides">
+          <q>Broccoli contains more protein than steak</q>
+        </div>
+        
+        <div class="hmySlides">
+          <q>Base your meals on higher fibre starchy carbohydrates</q>
+        </div>
+        
+        <div class="hmySlides">
+          <q>Eat lots of fruit and veg</q>
+        </div>
+                
+        <div class="hmySlides">
+          <q>Eat more fish, including a portion of oily fish</q>
+        </div>
+                
+        <div class="hmySlides">
+          <q>Cut down on saturated fat and sugar</q>
+        </div>
+                
+        <div class="hmySlides">
+          <q>Eat less salt: no more than 6g a day for adults</q>
+        </div>
+                
+        <div class="hmySlides">
+          <q>Get active and be a healthy weight</q>
+        </div>
+                
+        <div class="hmySlides">
+          <q>Do not get thirsty</q>
+        </div>
+                
+        <div class="hmySlides">
+          <q>Do not skip breakfast</q>
+        </div>
+                
+        <div class="hmySlides">
+          <q>Omega-3 Fats Are Crucial and Most People Don’t Get Enough</q>
+        </div>
+        
+        <a class="prev" onclick="hplusSlides(-1)">❮</a>
+        <a class="next" onclick="hplusSlides(1)">❯</a>
+        
+      </div>
+    </div>
+
+      <!--Contact Us Section-->
+
+    <div id="Contact_Us" class="tabcontent">
+      <h2 class="chead">Contact Us</h2>
+      
+      <div class="contact">
+        <div class="info">
+
+          <div class="ci">
+            <i class="fa-solid fa-location-dot"></i>
+            <h3 class="tle">Address</h3>
+            <p class="dse">123 street, New Delhi, India</p>
+          </div>
+
+          <div class="ci">
+            <i class="fa-solid fa-phone"></i>
+            <h3 class="tle">Call Us</h3>
+            <p class="dse">+91 0123456789</p>
+          </div>
+
+          <div class="ci">
+            <i class="fa-solid fa-envelope"></i>
+            <h3 class="tle">Email Us</h3>
+            <p class="dse">example@gmail.com</p>
+          </div>
+
+          <div class="ci">
+            <i class="fa-solid fa-share"></i>
+            <h3 class="tle">Follow  Us</h3>
+            <div class="dse">
+            <a href="https://www.twitter.com"><i class="fa-brands fa-twitter sicon"></i></a>
+            <a href="https://www.facbook.com"><i class="fa-brands fa-facebook-f sicon"></i></a>
+            <a href="https://www.instagram.com"><i class="fa-brands fa-instagram sicon"></i></a>
+            <a href="https://www.youtube.com"><i class="fa-brands fa-youtube sicon"></i></a>
+            <a href="https://www.linkedin.in"><i class="fa-brands fa-linkedin-in sicon"></i></a>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+      <div class="clow">
+        <div class="clap">
+          <iframe class="cmap" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d28058.341970839574!2d77.10989345342033!3d28.470729148883255!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d1ee1e0e7fdc9%3A0x7b5b17cdf771a399!2sAya%20Nagar%2C%20New%20Delhi%2C%20Delhi!5e0!3m2!1sen!2sin!4v1650126436001!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div class="ccaontainer info">
+          <form class="contfo ccontainer" onsubmit="mycontact()">
+            <input type="text" id="name" name="name" placeholder="Your name" required>
+            <input type="text" id="email" name="email" placeholder="Your email" required>
+            <input type="text" id="subject" name="subject" placeholder="Subject" required>
+            <textarea id="message" name="message" placeholder="Message" style="height:155px"></textarea>
+        
+            <input type="submit" value="Send" >
+            
+          </form>
+          
+        </div>
+      </div>
+    </div>
+  
+
+    <!--Footer Section-->
+  
+    <div class="footer">
+    <div class="foot-container">
+        <div class="foot-row">
+          <div class="foot-col">
+            <div class="foot-row">
+            
+          
+             <div class="foot-col">
+                <div class="footer-cont">
+                 <h2 class="ft">Our Address</h2>
+                  <p>
+                    <i class="fa-solid fa-location-dot sicon"></i>
+                    123 street, New Delhi, India
+                  </p>
+                  <p>
+                    <i class="fa-solid fa-phone sicon"></i>
+                   +91 0123456789
+                  </p>
+                  <p>
+                   <i class="fa-solid fa-envelope sicon"></i>
+                   example@gmail.com
+                  </p>
+                
+                    <div class="foot-soc">
+                      <a href="https://www.twitter.com"><i class="fa-brands fa-twitter sicon"></i></a>
+                     <a href="https://www.facbook.com"><i class="fa-brands fa-facebook-f sicon"></i></a>
+                     <a href="https://www.instagram.com"><i class="fa-brands fa-instagram sicon"></i></a>
+                     <a href="https://www.youtube.com"><i class="fa-brands fa-youtube sicon"></i></a>
+                     <a href="https://www.linkedin.in"><i class="fa-brands fa-linkedin-in sicon"></i></a>
+                   </div>
+               </div>
+              </div>
+        
+             <div class="foot-col">
+               <div class="foot-cont">
+                 <h2 class="ft">Quick Links</h2>
+                  <div class="flin"> 
+                    <a>Terms of Use</a>
+                    <a>Privacy policy</a>
+                    <a>Cookies</a>
+                   <a>Help</a>
+                  <a>FAQs</a>
+                 </div>
+               </div>
+             </div>
+        
+             </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="/logic.js" ></script>
+  </body>
+</html>
